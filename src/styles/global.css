@@ -1,0 +1,51 @@
+/* src/styles/global.css */
+
+/* Tailwind CSS directives (if used) would go here, e.g., @tailwind base; etc. */
+
+:root {
+  /* Earthy Sandy, Slate Gray, Sky Blue, and Fern Green Color Combination */
+  --color-dark-blue: #4A3D33; /* Deep Warm Brown - Main dark background (for dark mode) */
+  --color-secondary-blue-dark: #605247; /* Slightly lighter Warm Brown - for dark mode alternating sections */
+  --color-light-blue: #DDC2A8; /* Clay/Sandy - Main light background */
+  --color-lighter-blue: #F5E0C8; /* Even lighter sandy cream - for alternating light sections */
+  --color-mid-blue: #4F7942; /* Fern Green - for elements like skill tags (pop of color) */
+
+  --color-text-dark: #5A6268; /* Slate Gray - for text on light backgrounds */
+  --color-text-light: #FFFFFF; /* White - for text on dark backgrounds */
+
+  --color-accent: #6495ED; /* Cornflower Blue (Sky Blue) - primary accent color */
+  --color-accent-light: #ADD8E6; /* Lighter Sky Blue - for lighter accent contrast */
+
+  --color-border-dark: #8D6E63; /* Muted Brown-Gray - for borders in dark sections */
+  --color-border-light: #E5D3BD; /* Lighter sandy/clay - for borders in light sections */
+  --color-accent-shadow: rgba(100, 149, 237, 0.2); /* Shadow based on Cornflower Blue */
+
+  /* Added subtle gradient variables for backgrounds (updated to new colors) */
+  --gradient-dark-bg: linear-gradient(135deg, #302820, var(--color-dark-blue));
+  --gradient-secondary-dark-bg: linear-gradient(135deg, #4A3E36, var(--color-secondary-blue-dark));
+  --gradient-light-bg: linear-gradient(135deg, #EFE2D0, var(--color-light-blue));
+  --gradient-lighter-bg: linear-gradient(135deg, #FFFFFF, var(--color-lighter-blue));
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Base styles for the body to ensure font and background colors are applied */
+body {
+  font-family: Inter, sans-serif; /* Using Inter as specified */
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
